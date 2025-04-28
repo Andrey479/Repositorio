@@ -1,0 +1,92 @@
+* 
+{
+    background-color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body
+{
+    position: relative;
+    left: 25%;
+    right: 25%;
+    border: 1px solid black;
+    padding: 15px;
+    width: 750px;
+}
+h1
+{
+    color:  #34495e ;
+    text-align: center;
+}
+p
+{
+    font-size: 20px;
+    text-align: justify;
+}
+a
+{
+    color: blue;
+    text-decoration: none;
+}
+a:hover
+{
+    color: red;
+    text-decoration: underline;
+}
+#esquerda
+{
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    flex-direction: column; 
+    height: 100%;          
+    text-align: center;     
+}
+.itemLista
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#corridaImagem
+{
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+}
+.linha .coluna
+{
+    text-align: center;
+    border: 2px solid black;
+}
+#imagemPais
+{
+    width: 255px;
+    height: auto;
+}
+#mensagem 
+{
+    margin: 10px;
+    display: none;
+    color: green;
+    font-style: italic;
+}
+#botao 
+{
+    background-color: white;
+    font-size: 14px;
+    border: 2px solid green;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px; /* Adiciona um espaçamento superior */
+}
+#botao:hover 
+{
+    background-color: green;
+    color: white;
+}
+#hobbies
+{
+    display: flex;
+    align-items: center;
+    gap: 30%;
+}
