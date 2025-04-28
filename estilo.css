@@ -17,6 +17,10 @@ h1
     color:  #34495e ;
     text-align: center;
 }
+h2 
+{
+    text-align: center;
+}
 p
 {
     font-size: 20px;
@@ -32,7 +36,7 @@ a:hover
     color: red;
     text-decoration: underline;
 }
-#esquerda
+#centralizar
 {
     display: flex;
     justify-content: center; 
@@ -88,5 +92,5 @@ a:hover
 {
     display: flex;
     align-items: center;
-    gap: 30%;
+    gap: 10%;
 }
