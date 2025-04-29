@@ -1,11 +1,11 @@
 const botao = document.querySelector("#botao");
 const mensagem = document.querySelector("#mensagem");
-let contador = 1;
 
-/*para garantir que a mensagem só apareça uma vez*/
-if (contador = 1)
-    {
-        botao.addEventListener("click", () => {
-            mensagem.style.display = "block";});
-        contador++;
-    }
+//se clicar mais de uma vez a mensagem some
+botao.addEventListener("click", () => 
+{
+    if (mensagem.style.display === "block")
+        mensagem.style.display = "none";
+    else
+        mensagem.style.display = "block";
+});

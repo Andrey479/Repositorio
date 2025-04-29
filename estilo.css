@@ -8,7 +8,8 @@ body
     position: relative;
     left: 25%;
     right: 25%;
-    border: 1px solid black;
+    border: 5px outset gray;
+    border-radius: 20px;
     padding: 15px;
     width: 750px;
 }
@@ -34,7 +35,6 @@ a
 a:hover
 {
     color: red;
-    text-decoration: underline;
 }
 #centralizar
 {
@@ -60,6 +60,7 @@ a:hover
 {
     text-align: center;
     border: 2px solid black;
+    border-radius: 5px;
 }
 #imagemPais
 {
@@ -81,7 +82,7 @@ a:hover
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    margin-top: 20px; /* Adiciona um espaçamento superior */
+    margin-top: 20px;
 }
 #botao:hover 
 {
@@ -93,4 +94,8 @@ a:hover
     display: flex;
     align-items: center;
     gap: 10%;
+}
+#especial
+{
+    padding: 15px;
 }
