@@ -1,0 +1,11 @@
+body
+{
+    background-color:#7fa8eb;
+}
+#data
+{
+    position: relative;
+    align-items: center;
+    align-self: center;
+    align-content: center
+}
