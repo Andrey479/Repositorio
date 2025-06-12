@@ -2,11 +2,8 @@
 Andrey Oliveira Ferreira
 10/06/2025
 
-Software de gerenciamento de funcionarios
-perguntas:
-1) pode usar uma função para validar dados? exemplo: valida_caracteres() // verifica
-se o usuario digitou um caractere e não um numeral por exemplo
-2) No item III, o que devo fazer se o usuário digitar um valor que não for encontrado?
+Software de gerenciamento de funcionario
+#remover a função valida dados e deixar direto no programa
 '''
 #função que valida o nome do usuario
 def valida_caracteres(tipo):
@@ -39,74 +36,74 @@ def cadastrar_funcionario(id):
     dados = {'id': id, 'nome': nome, 'setor': setor, 'salario': salario}
     lista_funcionarios.append(dados.copy())
     dados.clear()
+    print(dados)
     id_global += 1
 
 #função reponsavel por consultar os dados dos funcionarios
 def consultar_funcionarios():
-    #Opções disponiveis
-    print('-' * 10, 'Consultar funcionarios', '-' * 10)
-    print('1 | Consultar todos')
-    print('2 | Consultar por ID')
-    print('3 | Consultar por setor')
-    print('4 | Retornar ao menu')
-    print()
-    
-    #Definindo dessa forma para ficar mais compacto a seção de impressão de resultados
-    opcao = 0
-    while (opcao < 1 or opcao > 4):
+    while True:
+        print()
+        print('-' * 10, 'Consultar funcionarios', '-' * 10)
+        print('1 | Consultar todos')
+        print('2 | Consultar por ID')
+        print('3 | Consultar por setor')
+        print('4 | Retornar ao menu')
+        print()
+
         try:
-            opcao = int(input('Escolha uma opção (1, 2, 3, 4): '))
-            if (opcao < 1 or opcao > 4):
-                print('Digite um valor contido entre 1 e 4')
-        except ValueError:
-            print('Valor digitado incorreto')
-
-    #seção de ações
-    if (opcao == 1): #consulta todos
-        for dicionario in lista_funcionarios:
-            for chave in dicionario:
-                print(f'{chave.upper()}: {dicionario[chave]}')
-            print()
-    elif (opcao == 2): #consulta por ID
-        id_buscado = int(input('Digite o ID do funcionario: '))
-        encontrou = False
-        for dicionario in lista_funcionarios:
-            if (dicionario['id'] == id_buscado):
-                print()
-                for chave in dicionario:
-                    print(f'{chave.upper()}: {dicionario[chave]}')
-                encontrou = True
-                break
-            else:
-                encontrou = False
+            opcao = int(input('Escolha uma opção (1|2|3|4): '))
             
-        if (encontrou == False):
-            print('O ID informado não foi encontrado')
-    elif (opcao == 3): #consulta por setor
-        print('Escolha 3')
-        return 3
-    elif (opcao == 4): #retorna ao menu
-        print('Escolha 4')
-        return 4
-    else: #se não for nenhuma opção
-        print('Valor digitado incorreto. Tente novamente')
-        
+           #consulta todos
+            if (opcao == 1): 
+                print()
+                for dicionario in lista_funcionarios:
+                    for chave in dicionario:
+                        print(f'{chave.upper()}: {dicionario[chave]}')
+                    print()
+            #consulta por ID 
+            elif (opcao == 2): 
+                encontrou = False
+                id_buscado = int(input('Digite o ID do funcionario: '))
+                for dicionario in lista_funcionarios:
+                    if (dicionario['id'] == id_buscado):
+                        encontrou = True
+                        print()
+                        for chave in dicionario:
+                            print(f'{chave.upper()}: {dicionario[chave]}')
+                if not encontrou:
+                    print('O ID informado não foi encontrado')
+            #consulta por setor
+            elif (opcao == 3): 
+                print('Setores disponiveis: ', end='')
+                for dicionario in lista_funcionarios:
+                    print(f'{dicionario['setor']} | ', end='')
+                print()
 
+                setor_buscado = valida_caracteres('setor')
+                encontrou = False
+                print()
 
+                for dicionario in lista_funcionarios:
+                    if (setor_buscado == dicionario['setor']):
+                        encontrou = True
+                        for chave in dicionario:
+                            print(f'{chave.upper()}: {dicionario[chave]}')
+                        print()
 
-
-
-
-
-
-
-
-#consultar_funcionarios()
-
-
+                if not encontrou:
+                    print('Não encontramos o setor mencionado')
+            #retorna ao menu
+            elif (opcao == 4): 
+                return
+            #exceções
+            else: 
+                print('Opção inválida')
+                continue
+        except ValueError:
+            print('Valor inválido.')
 
 #Boas vindas ao usúario
-print('Seja bem vindo ao sistema de gerenciamento de funcionarios de Andrey Oliveira')
+print('\nSeja bem vindo ao sistema de gerenciamento de funcionarios de Andrey Oliveira\n')
 
 #dados iniciais
 lista_funcionarios = []
@@ -114,19 +111,6 @@ id_global = 5256701
 
 for i in range(2):
     cadastrar_funcionario(id_global)
+    print()
 
-consultar_funcionarios()
-#print(lista_funcionarios)
-
-
-
-
-
-
-
-
-
-
-
-
-
+#consultar_funcionarios()
