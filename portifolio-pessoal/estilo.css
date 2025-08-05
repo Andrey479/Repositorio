@@ -1,0 +1,40 @@
+/*Formatações gerais*/
+* {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Fundo geral*/
+body{
+    background: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+}
+
+/*barra de navegação*/
+nav {
+    background: #333;
+    box-shadow: 0 2px 8px;
+    margin-bottom: 32px;
+}
+
+nav ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav li a {
+    color: #fff;
+    padding: 14px 18px;
+    text-decoration: none;
+    display: block;
+}
+nav li:hover, nav li a:hover{
+    background-color: #555;
+    color: white;
+}
