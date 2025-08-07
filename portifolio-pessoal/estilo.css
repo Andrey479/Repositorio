@@ -13,6 +13,7 @@ body{
     min-height: 100vh;
 }
 
+
 /*barra de navegação*/
 nav {
     background: #333;
@@ -45,6 +46,7 @@ nav li a:hover, nav li.active a {
     color: #fff;
 }
 
+
 /*Titulo*/
 h1{
     font-size: 2.4em;
@@ -53,6 +55,7 @@ h1{
     text-align: center;
     color: #222;
 }
+
 
 /*Conteudo*/
 main {
@@ -63,6 +66,7 @@ main {
     box-shadow: 0 2px 16px #0001;
     padding: 32px 28px;
 }
+
 
 section {
     margin-bottom: 32px;
@@ -99,6 +103,7 @@ ul, ol {
 li {
     margin-bottom: 6px;
 }
+
 
 /*Página de contato*/
 form{
@@ -140,6 +145,8 @@ input[type="text"], input[type="email"], textarea {
     background: #0eac7a;
     box-shadow: 0 4px 12px #0002;
 }
+
+/*Responsividade*/
 @media (max-width: 700px) {
     main {padding: 16px 6px;}
     nav ul {flex-direction: column;}
